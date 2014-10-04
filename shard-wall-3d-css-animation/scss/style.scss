@@ -1,0 +1,76 @@
+@import "compass/css3";
+
+// uses -prefix-free
+$total: 200;
+$size: 10;
+$hue: 0;
+
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+.wrap {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 200px;
+}
+.inner {
+  height: 100%;
+  transform-style: preserve-3d;
+  perspective: 100px;
+  animation: lag 20s infinite alternate;
+  
+}
+.c {
+/*   background: white; */
+  width: 5%;
+  height: 10%;
+  float: left;
+}
+
+@function posOrNeg(){
+  $n:();
+  $r: random(1, 100);
+  @if($r>50){
+    $n: 1;
+  } @else {
+    $n: -1;
+  }
+  @return $n;
+}
+
+@for $i from 1 through $total {
+  $hue: $i * 1.35;
+  .c:nth-child(#{$i}){
+    animation: anim#{$i} 4s infinite alternate;
+    background: white;
+    animation-delay: $i * .01s;
+    background: hsla($hue, 100%, 50%, .9);
+  }
+  @keyframes anim#{$i} {
+    
+    0% {
+      transform: translate3d(random(1000) + 500 * posOrNeg()+px, random(1000) * posOrNeg()+px, random(1000) * posOrNeg()+px);
+      opacity: 0;
+    }
+    70% {
+      transform: translate3d(0,0,0);
+    }
+  }
+}
+
+@keyframes lag {
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateZ(180deg);
+  }
+}

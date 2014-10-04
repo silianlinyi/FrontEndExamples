@@ -1,0 +1,45 @@
+@import "compass/css3";
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+$color: #ea3830;
+
+*, *:before, *:after { box-sizing: border-box; }
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: $color; text-decoration: none; }
+nav {
+  position: relative;
+  width: 100%; max-width: 960px; min-width: 400px; height: 50px;
+  margin: 25px auto;
+  border-bottom: 3px solid #eee;
+  .slider {
+    position: absolute;
+    bottom: 0;
+    width: 25%; height: 3px;
+    box-shadow: 0 3px $color;
+    transition: all .3s ease-in-out;
+  }
+  ul {
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    li {
+      width: 25%; height: 50px;
+      flex: 25%;
+      line-height: 50px;
+      a {
+        padding: 0 25px;
+        display: block;
+        font-weight: 600;
+      }
+    }
+  }
+}

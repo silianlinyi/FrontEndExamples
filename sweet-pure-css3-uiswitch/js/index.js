@@ -1,0 +1,1 @@
+// Read more @ https://github.com/fnky/css3-uiswitch

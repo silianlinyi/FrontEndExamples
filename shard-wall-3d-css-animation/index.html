@@ -1,0 +1,3388 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>CodePen - Pen</title>
+
+		<style>
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			b,
+			u,
+			i,
+			center,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td,
+			article,
+			aside,
+			canvas,
+			details,
+			embed,
+			figure,
+			figcaption,
+			footer,
+			header,
+			hgroup,
+			menu,
+			nav,
+			output,
+			ruby,
+			section,
+			summary,
+			time,
+			mark,
+			audio,
+			video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline
+			}
+			article,
+			aside,
+			details,
+			figcaption,
+			figure,
+			footer,
+			header,
+			hgroup,
+			menu,
+			nav,
+			section {
+				display: block
+			}
+			body {
+				line-height: 1
+			}
+			ol,
+			ul {
+				list-style: none
+			}
+			blockquote,
+			q {
+				quotes: none
+			}
+			blockquote:before,
+			blockquote:after,
+			q:before,
+			q:after {
+				content: '';
+				content: none
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+		</style>
+
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+			body {
+				min-height: 100%;
+				background: black;
+				overflow: hidden;
+			}
+			.wrap {
+				height: 100%;
+				min-height: 100%;
+				position: relative;
+				transform-style: preserve-3d;
+				perspective: 200px;
+			}
+			.inner {
+				height: 100%;
+				transform-style: preserve-3d;
+				perspective: 100px;
+				animation: lag 20s infinite alternate;
+			}
+			.c {
+				/*   background: white; */
+				width: 5%;
+				height: 10%;
+				float: left;
+			}
+			.c:nth-child(1) {
+				animation: anim1 4s infinite alternate;
+				background: white;
+				animation-delay: 0.01s;
+				background: rgba(255, 6, 0, 0.9);
+			}
+			@keyframes anim1 {
+				0% {
+					transform: translate3d(-488px, 371px, -147px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(2) {
+				animation: anim2 4s infinite alternate;
+				background: white;
+				animation-delay: 0.02s;
+				background: rgba(255, 11, 0, 0.9);
+			}
+			@keyframes anim2 {
+				0% {
+					transform: translate3d(19px, -768px, -319px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(3) {
+				animation: anim3 4s infinite alternate;
+				background: white;
+				animation-delay: 0.03s;
+				background: rgba(255, 17, 0, 0.9);
+			}
+			@keyframes anim3 {
+				0% {
+					transform: translate3d(1340px, 798px, -943px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(4) {
+				animation: anim4 4s infinite alternate;
+				background: white;
+				animation-delay: 0.04s;
+				background: rgba(255, 23, 0, 0.9);
+			}
+			@keyframes anim4 {
+				0% {
+					transform: translate3d(927px, -352px, -942px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(5) {
+				animation: anim5 4s infinite alternate;
+				background: white;
+				animation-delay: 0.05s;
+				background: rgba(255, 29, 0, 0.9);
+			}
+			@keyframes anim5 {
+				0% {
+					transform: translate3d(832px, 87px, 300px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(6) {
+				animation: anim6 4s infinite alternate;
+				background: white;
+				animation-delay: 0.06s;
+				background: rgba(255, 34, 0, 0.9);
+			}
+			@keyframes anim6 {
+				0% {
+					transform: translate3d(128px, 362px, -367px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(7) {
+				animation: anim7 4s infinite alternate;
+				background: white;
+				animation-delay: 0.07s;
+				background: rgba(255, 40, 0, 0.9);
+			}
+			@keyframes anim7 {
+				0% {
+					transform: translate3d(1275px, -984px, -215px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(8) {
+				animation: anim8 4s infinite alternate;
+				background: white;
+				animation-delay: 0.08s;
+				background: rgba(255, 46, 0, 0.9);
+			}
+			@keyframes anim8 {
+				0% {
+					transform: translate3d(-141px, 603px, -569px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(9) {
+				animation: anim9 4s infinite alternate;
+				background: white;
+				animation-delay: 0.09s;
+				background: rgba(255, 52, 0, 0.9);
+			}
+			@keyframes anim9 {
+				0% {
+					transform: translate3d(384px, 622px, 43px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(10) {
+				animation: anim10 4s infinite alternate;
+				background: white;
+				animation-delay: 0.1s;
+				background: rgba(255, 57, 0, 0.9);
+			}
+			@keyframes anim10 {
+				0% {
+					transform: translate3d(-395px, -130px, 12px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(11) {
+				animation: anim11 4s infinite alternate;
+				background: white;
+				animation-delay: 0.11s;
+				background: rgba(255, 63, 0, 0.9);
+			}
+			@keyframes anim11 {
+				0% {
+					transform: translate3d(460px, -311px, -413px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(12) {
+				animation: anim12 4s infinite alternate;
+				background: white;
+				animation-delay: 0.12s;
+				background: rgba(255, 69, 0, 0.9);
+			}
+			@keyframes anim12 {
+				0% {
+					transform: translate3d(462px, 325px, 730px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(13) {
+				animation: anim13 4s infinite alternate;
+				background: white;
+				animation-delay: 0.13s;
+				background: rgba(255, 75, 0, 0.9);
+			}
+			@keyframes anim13 {
+				0% {
+					transform: translate3d(1056px, 589px, -35px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(14) {
+				animation: anim14 4s infinite alternate;
+				background: white;
+				animation-delay: 0.14s;
+				background: rgba(255, 80, 0, 0.9);
+			}
+			@keyframes anim14 {
+				0% {
+					transform: translate3d(1066px, 185px, 212px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(15) {
+				animation: anim15 4s infinite alternate;
+				background: white;
+				animation-delay: 0.15s;
+				background: rgba(255, 86, 0, 0.9);
+			}
+			@keyframes anim15 {
+				0% {
+					transform: translate3d(1124px, -636px, -445px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(16) {
+				animation: anim16 4s infinite alternate;
+				background: white;
+				animation-delay: 0.16s;
+				background: rgba(255, 92, 0, 0.9);
+			}
+			@keyframes anim16 {
+				0% {
+					transform: translate3d(-329px, 366px, -979px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(17) {
+				animation: anim17 4s infinite alternate;
+				background: white;
+				animation-delay: 0.17s;
+				background: rgba(255, 98, 0, 0.9);
+			}
+			@keyframes anim17 {
+				0% {
+					transform: translate3d(300px, 110px, 474px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(18) {
+				animation: anim18 4s infinite alternate;
+				background: white;
+				animation-delay: 0.18s;
+				background: rgba(255, 103, 0, 0.9);
+			}
+			@keyframes anim18 {
+				0% {
+					transform: translate3d(35px, -25px, -550px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(19) {
+				animation: anim19 4s infinite alternate;
+				background: white;
+				animation-delay: 0.19s;
+				background: rgba(255, 109, 0, 0.9);
+			}
+			@keyframes anim19 {
+				0% {
+					transform: translate3d(-119px, -638px, 697px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(20) {
+				animation: anim20 4s infinite alternate;
+				background: white;
+				animation-delay: 0.2s;
+				background: rgba(255, 115, 0, 0.9);
+			}
+			@keyframes anim20 {
+				0% {
+					transform: translate3d(1158px, 497px, 281px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(21) {
+				animation: anim21 4s infinite alternate;
+				background: white;
+				animation-delay: 0.21s;
+				background: rgba(255, 120, 0, 0.9);
+			}
+			@keyframes anim21 {
+				0% {
+					transform: translate3d(-187px, 348px, -197px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(22) {
+				animation: anim22 4s infinite alternate;
+				background: white;
+				animation-delay: 0.22s;
+				background: rgba(255, 126, 0, 0.9);
+			}
+			@keyframes anim22 {
+				0% {
+					transform: translate3d(741px, -278px, 963px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(23) {
+				animation: anim23 4s infinite alternate;
+				background: white;
+				animation-delay: 0.23s;
+				background: rgba(255, 132, 0, 0.9);
+			}
+			@keyframes anim23 {
+				0% {
+					transform: translate3d(222px, 622px, -588px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(24) {
+				animation: anim24 4s infinite alternate;
+				background: white;
+				animation-delay: 0.24s;
+				background: rgba(255, 138, 0, 0.9);
+			}
+			@keyframes anim24 {
+				0% {
+					transform: translate3d(385px, 994px, -720px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(25) {
+				animation: anim25 4s infinite alternate;
+				background: white;
+				animation-delay: 0.25s;
+				background: rgba(255, 143, 0, 0.9);
+			}
+			@keyframes anim25 {
+				0% {
+					transform: translate3d(1206px, 533px, -197px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(26) {
+				animation: anim26 4s infinite alternate;
+				background: white;
+				animation-delay: 0.26s;
+				background: rgba(255, 149, 0, 0.9);
+			}
+			@keyframes anim26 {
+				0% {
+					transform: translate3d(216px, -787px, -841px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(27) {
+				animation: anim27 4s infinite alternate;
+				background: white;
+				animation-delay: 0.27s;
+				background: rgba(255, 155, 0, 0.9);
+			}
+			@keyframes anim27 {
+				0% {
+					transform: translate3d(593px, -135px, -662px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(28) {
+				animation: anim28 4s infinite alternate;
+				background: white;
+				animation-delay: 0.28s;
+				background: rgba(255, 161, 0, 0.9);
+			}
+			@keyframes anim28 {
+				0% {
+					transform: translate3d(1251px, 483px, -473px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(29) {
+				animation: anim29 4s infinite alternate;
+				background: white;
+				animation-delay: 0.29s;
+				background: rgba(255, 166, 0, 0.9);
+			}
+			@keyframes anim29 {
+				0% {
+					transform: translate3d(816px, -493px, -474px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(30) {
+				animation: anim30 4s infinite alternate;
+				background: white;
+				animation-delay: 0.3s;
+				background: rgba(255, 172, 0, 0.9);
+			}
+			@keyframes anim30 {
+				0% {
+					transform: translate3d(943px, 660px, 540px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(31) {
+				animation: anim31 4s infinite alternate;
+				background: white;
+				animation-delay: 0.31s;
+				background: rgba(255, 178, 0, 0.9);
+			}
+			@keyframes anim31 {
+				0% {
+					transform: translate3d(20px, -128px, 987px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(32) {
+				animation: anim32 4s infinite alternate;
+				background: white;
+				animation-delay: 0.32s;
+				background: rgba(255, 184, 0, 0.9);
+			}
+			@keyframes anim32 {
+				0% {
+					transform: translate3d(626px, -990px, -851px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(33) {
+				animation: anim33 4s infinite alternate;
+				background: white;
+				animation-delay: 0.33s;
+				background: rgba(255, 189, 0, 0.9);
+			}
+			@keyframes anim33 {
+				0% {
+					transform: translate3d(673px, 231px, -126px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(34) {
+				animation: anim34 4s infinite alternate;
+				background: white;
+				animation-delay: 0.34s;
+				background: rgba(255, 195, 0, 0.9);
+			}
+			@keyframes anim34 {
+				0% {
+					transform: translate3d(912px, 474px, 698px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(35) {
+				animation: anim35 4s infinite alternate;
+				background: white;
+				animation-delay: 0.35s;
+				background: rgba(255, 201, 0, 0.9);
+			}
+			@keyframes anim35 {
+				0% {
+					transform: translate3d(-33px, -652px, -437px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(36) {
+				animation: anim36 4s infinite alternate;
+				background: white;
+				animation-delay: 0.36s;
+				background: rgba(255, 207, 0, 0.9);
+			}
+			@keyframes anim36 {
+				0% {
+					transform: translate3d(1237px, -755px, -936px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(37) {
+				animation: anim37 4s infinite alternate;
+				background: white;
+				animation-delay: 0.37s;
+				background: rgba(255, 212, 0, 0.9);
+			}
+			@keyframes anim37 {
+				0% {
+					transform: translate3d(1207px, -265px, 188px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(38) {
+				animation: anim38 4s infinite alternate;
+				background: white;
+				animation-delay: 0.38s;
+				background: rgba(255, 218, 0, 0.9);
+			}
+			@keyframes anim38 {
+				0% {
+					transform: translate3d(158px, -317px, 58px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(39) {
+				animation: anim39 4s infinite alternate;
+				background: white;
+				animation-delay: 0.39s;
+				background: rgba(255, 224, 0, 0.9);
+			}
+			@keyframes anim39 {
+				0% {
+					transform: translate3d(1088px, -208px, 441px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(40) {
+				animation: anim40 4s infinite alternate;
+				background: white;
+				animation-delay: 0.4s;
+				background: rgba(255, 229, 0, 0.9);
+			}
+			@keyframes anim40 {
+				0% {
+					transform: translate3d(-15px, 766px, 937px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(41) {
+				animation: anim41 4s infinite alternate;
+				background: white;
+				animation-delay: 0.41s;
+				background: rgba(255, 235, 0, 0.9);
+			}
+			@keyframes anim41 {
+				0% {
+					transform: translate3d(-156px, -526px, 913px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(42) {
+				animation: anim42 4s infinite alternate;
+				background: white;
+				animation-delay: 0.42s;
+				background: rgba(255, 241, 0, 0.9);
+			}
+			@keyframes anim42 {
+				0% {
+					transform: translate3d(749px, -680px, 100px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(43) {
+				animation: anim43 4s infinite alternate;
+				background: white;
+				animation-delay: 0.43s;
+				background: rgba(255, 247, 0, 0.9);
+			}
+			@keyframes anim43 {
+				0% {
+					transform: translate3d(-241px, -407px, 983px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(44) {
+				animation: anim44 4s infinite alternate;
+				background: white;
+				animation-delay: 0.44s;
+				background: rgba(255, 252, 0, 0.9);
+			}
+			@keyframes anim44 {
+				0% {
+					transform: translate3d(252px, -708px, 162px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(45) {
+				animation: anim45 4s infinite alternate;
+				background: white;
+				animation-delay: 0.45s;
+				background: rgba(252, 255, 0, 0.9);
+			}
+			@keyframes anim45 {
+				0% {
+					transform: translate3d(-239px, -622px, -835px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(46) {
+				animation: anim46 4s infinite alternate;
+				background: white;
+				animation-delay: 0.46s;
+				background: rgba(246, 255, 0, 0.9);
+			}
+			@keyframes anim46 {
+				0% {
+					transform: translate3d(989px, -271px, -644px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(47) {
+				animation: anim47 4s infinite alternate;
+				background: white;
+				animation-delay: 0.47s;
+				background: rgba(240, 255, 0, 0.9);
+			}
+			@keyframes anim47 {
+				0% {
+					transform: translate3d(143px, 397px, 198px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(48) {
+				animation: anim48 4s infinite alternate;
+				background: white;
+				animation-delay: 0.48s;
+				background: rgba(235, 255, 0, 0.9);
+			}
+			@keyframes anim48 {
+				0% {
+					transform: translate3d(-73px, -23px, 747px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(49) {
+				animation: anim49 4s infinite alternate;
+				background: white;
+				animation-delay: 0.49s;
+				background: rgba(229, 255, 0, 0.9);
+			}
+			@keyframes anim49 {
+				0% {
+					transform: translate3d(1177px, 731px, -579px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(50) {
+				animation: anim50 4s infinite alternate;
+				background: white;
+				animation-delay: 0.5s;
+				background: rgba(223, 255, 0, 0.9);
+			}
+			@keyframes anim50 {
+				0% {
+					transform: translate3d(-401px, 216px, -352px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(51) {
+				animation: anim51 4s infinite alternate;
+				background: white;
+				animation-delay: 0.51s;
+				background: rgba(217, 255, 0, 0.9);
+			}
+			@keyframes anim51 {
+				0% {
+					transform: translate3d(620px, -268px, 690px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(52) {
+				animation: anim52 4s infinite alternate;
+				background: white;
+				animation-delay: 0.52s;
+				background: rgba(212, 255, 0, 0.9);
+			}
+			@keyframes anim52 {
+				0% {
+					transform: translate3d(28px, -916px, 256px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(53) {
+				animation: anim53 4s infinite alternate;
+				background: white;
+				animation-delay: 0.53s;
+				background: rgba(206, 255, 0, 0.9);
+			}
+			@keyframes anim53 {
+				0% {
+					transform: translate3d(588px, -340px, -369px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(54) {
+				animation: anim54 4s infinite alternate;
+				background: white;
+				animation-delay: 0.54s;
+				background: rgba(200, 255, 0, 0.9);
+			}
+			@keyframes anim54 {
+				0% {
+					transform: translate3d(-392px, -951px, 466px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(55) {
+				animation: anim55 4s infinite alternate;
+				background: white;
+				animation-delay: 0.55s;
+				background: rgba(194, 255, 0, 0.9);
+			}
+			@keyframes anim55 {
+				0% {
+					transform: translate3d(23px, -14px, 507px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(56) {
+				animation: anim56 4s infinite alternate;
+				background: white;
+				animation-delay: 0.56s;
+				background: rgba(189, 255, 0, 0.9);
+			}
+			@keyframes anim56 {
+				0% {
+					transform: translate3d(1136px, -37px, 479px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(57) {
+				animation: anim57 4s infinite alternate;
+				background: white;
+				animation-delay: 0.57s;
+				background: rgba(183, 255, 0, 0.9);
+			}
+			@keyframes anim57 {
+				0% {
+					transform: translate3d(676px, -401px, -983px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(58) {
+				animation: anim58 4s infinite alternate;
+				background: white;
+				animation-delay: 0.58s;
+				background: rgba(177, 255, 0, 0.9);
+			}
+			@keyframes anim58 {
+				0% {
+					transform: translate3d(520px, 488px, -479px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(59) {
+				animation: anim59 4s infinite alternate;
+				background: white;
+				animation-delay: 0.59s;
+				background: rgba(171, 255, 0, 0.9);
+			}
+			@keyframes anim59 {
+				0% {
+					transform: translate3d(533px, 450px, -353px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(60) {
+				animation: anim60 4s infinite alternate;
+				background: white;
+				animation-delay: 0.6s;
+				background: rgba(166, 255, 0, 0.9);
+			}
+			@keyframes anim60 {
+				0% {
+					transform: translate3d(555px, -405px, -217px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(61) {
+				animation: anim61 4s infinite alternate;
+				background: white;
+				animation-delay: 0.61s;
+				background: rgba(160, 255, 0, 0.9);
+			}
+			@keyframes anim61 {
+				0% {
+					transform: translate3d(968px, -859px, 977px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(62) {
+				animation: anim62 4s infinite alternate;
+				background: white;
+				animation-delay: 0.62s;
+				background: rgba(154, 255, 0, 0.9);
+			}
+			@keyframes anim62 {
+				0% {
+					transform: translate3d(-368px, 928px, 137px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(63) {
+				animation: anim63 4s infinite alternate;
+				background: white;
+				animation-delay: 0.63s;
+				background: rgba(149, 255, 0, 0.9);
+			}
+			@keyframes anim63 {
+				0% {
+					transform: translate3d(1402px, 640px, -901px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(64) {
+				animation: anim64 4s infinite alternate;
+				background: white;
+				animation-delay: 0.64s;
+				background: rgba(143, 255, 0, 0.9);
+			}
+			@keyframes anim64 {
+				0% {
+					transform: translate3d(637px, -623px, -122px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(65) {
+				animation: anim65 4s infinite alternate;
+				background: white;
+				animation-delay: 0.65s;
+				background: rgba(137, 255, 0, 0.9);
+			}
+			@keyframes anim65 {
+				0% {
+					transform: translate3d(379px, -750px, -942px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(66) {
+				animation: anim66 4s infinite alternate;
+				background: white;
+				animation-delay: 0.66s;
+				background: rgba(131, 255, 0, 0.9);
+			}
+			@keyframes anim66 {
+				0% {
+					transform: translate3d(-257px, 497px, -195px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(67) {
+				animation: anim67 4s infinite alternate;
+				background: white;
+				animation-delay: 0.67s;
+				background: rgba(126, 255, 0, 0.9);
+			}
+			@keyframes anim67 {
+				0% {
+					transform: translate3d(-14px, -647px, 132px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(68) {
+				animation: anim68 4s infinite alternate;
+				background: white;
+				animation-delay: 0.68s;
+				background: rgba(120, 255, 0, 0.9);
+			}
+			@keyframes anim68 {
+				0% {
+					transform: translate3d(670px, 776px, 71px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(69) {
+				animation: anim69 4s infinite alternate;
+				background: white;
+				animation-delay: 0.69s;
+				background: rgba(114, 255, 0, 0.9);
+			}
+			@keyframes anim69 {
+				0% {
+					transform: translate3d(115px, -116px, -753px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(70) {
+				animation: anim70 4s infinite alternate;
+				background: white;
+				animation-delay: 0.7s;
+				background: rgba(108, 255, 0, 0.9);
+			}
+			@keyframes anim70 {
+				0% {
+					transform: translate3d(1264px, -569px, -963px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(71) {
+				animation: anim71 4s infinite alternate;
+				background: white;
+				animation-delay: 0.71s;
+				background: rgba(103, 255, 0, 0.9);
+			}
+			@keyframes anim71 {
+				0% {
+					transform: translate3d(1366px, -315px, 500px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(72) {
+				animation: anim72 4s infinite alternate;
+				background: white;
+				animation-delay: 0.72s;
+				background: rgba(97, 255, 0, 0.9);
+			}
+			@keyframes anim72 {
+				0% {
+					transform: translate3d(965px, 326px, 976px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(73) {
+				animation: anim73 4s infinite alternate;
+				background: white;
+				animation-delay: 0.73s;
+				background: rgba(91, 255, 0, 0.9);
+			}
+			@keyframes anim73 {
+				0% {
+					transform: translate3d(12px, 534px, -384px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(74) {
+				animation: anim74 4s infinite alternate;
+				background: white;
+				animation-delay: 0.74s;
+				background: rgba(85, 255, 0, 0.9);
+			}
+			@keyframes anim74 {
+				0% {
+					transform: translate3d(399px, 77px, -878px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(75) {
+				animation: anim75 4s infinite alternate;
+				background: white;
+				animation-delay: 0.75s;
+				background: rgba(80, 255, 0, 0.9);
+			}
+			@keyframes anim75 {
+				0% {
+					transform: translate3d(1232px, -866px, 346px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(76) {
+				animation: anim76 4s infinite alternate;
+				background: white;
+				animation-delay: 0.76s;
+				background: rgba(74, 255, 0, 0.9);
+			}
+			@keyframes anim76 {
+				0% {
+					transform: translate3d(-360px, -370px, 271px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(77) {
+				animation: anim77 4s infinite alternate;
+				background: white;
+				animation-delay: 0.77s;
+				background: rgba(68, 255, 0, 0.9);
+			}
+			@keyframes anim77 {
+				0% {
+					transform: translate3d(880px, -361px, -234px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(78) {
+				animation: anim78 4s infinite alternate;
+				background: white;
+				animation-delay: 0.78s;
+				background: rgba(62, 255, 0, 0.9);
+			}
+			@keyframes anim78 {
+				0% {
+					transform: translate3d(-20px, -36px, 350px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(79) {
+				animation: anim79 4s infinite alternate;
+				background: white;
+				animation-delay: 0.79s;
+				background: rgba(57, 255, 0, 0.9);
+			}
+			@keyframes anim79 {
+				0% {
+					transform: translate3d(-304px, -190px, -844px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(80) {
+				animation: anim80 4s infinite alternate;
+				background: white;
+				animation-delay: 0.8s;
+				background: rgba(51, 255, 0, 0.9);
+			}
+			@keyframes anim80 {
+				0% {
+					transform: translate3d(110px, 827px, 314px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(81) {
+				animation: anim81 4s infinite alternate;
+				background: white;
+				animation-delay: 0.81s;
+				background: rgba(45, 255, 0, 0.9);
+			}
+			@keyframes anim81 {
+				0% {
+					transform: translate3d(-317px, -584px, 726px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(82) {
+				animation: anim82 4s infinite alternate;
+				background: white;
+				animation-delay: 0.82s;
+				background: rgba(40, 255, 0, 0.9);
+			}
+			@keyframes anim82 {
+				0% {
+					transform: translate3d(1437px, -645px, -983px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(83) {
+				animation: anim83 4s infinite alternate;
+				background: white;
+				animation-delay: 0.83s;
+				background: rgba(34, 255, 0, 0.9);
+			}
+			@keyframes anim83 {
+				0% {
+					transform: translate3d(448px, 798px, 184px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(84) {
+				animation: anim84 4s infinite alternate;
+				background: white;
+				animation-delay: 0.84s;
+				background: rgba(28, 255, 0, 0.9);
+			}
+			@keyframes anim84 {
+				0% {
+					transform: translate3d(938px, -417px, -431px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(85) {
+				animation: anim85 4s infinite alternate;
+				background: white;
+				animation-delay: 0.85s;
+				background: rgba(22, 255, 0, 0.9);
+			}
+			@keyframes anim85 {
+				0% {
+					transform: translate3d(429px, 131px, -576px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(86) {
+				animation: anim86 4s infinite alternate;
+				background: white;
+				animation-delay: 0.86s;
+				background: rgba(17, 255, 0, 0.9);
+			}
+			@keyframes anim86 {
+				0% {
+					transform: translate3d(642px, -444px, -95px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(87) {
+				animation: anim87 4s infinite alternate;
+				background: white;
+				animation-delay: 0.87s;
+				background: rgba(11, 255, 0, 0.9);
+			}
+			@keyframes anim87 {
+				0% {
+					transform: translate3d(771px, 631px, -993px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(88) {
+				animation: anim88 4s infinite alternate;
+				background: white;
+				animation-delay: 0.88s;
+				background: rgba(5, 255, 0, 0.9);
+			}
+			@keyframes anim88 {
+				0% {
+					transform: translate3d(-52px, 499px, -934px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(89) {
+				animation: anim89 4s infinite alternate;
+				background: white;
+				animation-delay: 0.89s;
+				background: rgba(0, 255, 1, 0.9);
+			}
+			@keyframes anim89 {
+				0% {
+					transform: translate3d(-150px, 909px, -110px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(90) {
+				animation: anim90 4s infinite alternate;
+				background: white;
+				animation-delay: 0.9s;
+				background: rgba(0, 255, 6, 0.9);
+			}
+			@keyframes anim90 {
+				0% {
+					transform: translate3d(1376px, -591px, 712px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(91) {
+				animation: anim91 4s infinite alternate;
+				background: white;
+				animation-delay: 0.91s;
+				background: rgba(0, 255, 12, 0.9);
+			}
+			@keyframes anim91 {
+				0% {
+					transform: translate3d(-135px, 495px, -333px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(92) {
+				animation: anim92 4s infinite alternate;
+				background: white;
+				animation-delay: 0.92s;
+				background: rgba(0, 255, 18, 0.9);
+			}
+			@keyframes anim92 {
+				0% {
+					transform: translate3d(-448px, 829px, -509px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(93) {
+				animation: anim93 4s infinite alternate;
+				background: white;
+				animation-delay: 0.93s;
+				background: rgba(0, 255, 24, 0.9);
+			}
+			@keyframes anim93 {
+				0% {
+					transform: translate3d(-442px, 791px, -752px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(94) {
+				animation: anim94 4s infinite alternate;
+				background: white;
+				animation-delay: 0.94s;
+				background: rgba(0, 255, 29, 0.9);
+			}
+			@keyframes anim94 {
+				0% {
+					transform: translate3d(-485px, 333px, 328px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(95) {
+				animation: anim95 4s infinite alternate;
+				background: white;
+				animation-delay: 0.95s;
+				background: rgba(0, 255, 35, 0.9);
+			}
+			@keyframes anim95 {
+				0% {
+					transform: translate3d(985px, 688px, -899px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(96) {
+				animation: anim96 4s infinite alternate;
+				background: white;
+				animation-delay: 0.96s;
+				background: rgba(0, 255, 41, 0.9);
+			}
+			@keyframes anim96 {
+				0% {
+					transform: translate3d(767px, 541px, 962px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(97) {
+				animation: anim97 4s infinite alternate;
+				background: white;
+				animation-delay: 0.97s;
+				background: rgba(0, 255, 47, 0.9);
+			}
+			@keyframes anim97 {
+				0% {
+					transform: translate3d(66px, -444px, 237px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(98) {
+				animation: anim98 4s infinite alternate;
+				background: white;
+				animation-delay: 0.98s;
+				background: rgba(0, 255, 52, 0.9);
+			}
+			@keyframes anim98 {
+				0% {
+					transform: translate3d(-228px, -690px, -812px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(99) {
+				animation: anim99 4s infinite alternate;
+				background: white;
+				animation-delay: 0.99s;
+				background: rgba(0, 255, 58, 0.9);
+			}
+			@keyframes anim99 {
+				0% {
+					transform: translate3d(1125px, 776px, 53px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(100) {
+				animation: anim100 4s infinite alternate;
+				background: white;
+				animation-delay: 1s;
+				background: rgba(0, 255, 64, 0.9);
+			}
+			@keyframes anim100 {
+				0% {
+					transform: translate3d(281px, -944px, 975px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(101) {
+				animation: anim101 4s infinite alternate;
+				background: white;
+				animation-delay: 1.01s;
+				background: rgba(0, 255, 69, 0.9);
+			}
+			@keyframes anim101 {
+				0% {
+					transform: translate3d(-190px, -108px, -18px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(102) {
+				animation: anim102 4s infinite alternate;
+				background: white;
+				animation-delay: 1.02s;
+				background: rgba(0, 255, 75, 0.9);
+			}
+			@keyframes anim102 {
+				0% {
+					transform: translate3d(998px, 357px, -763px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(103) {
+				animation: anim103 4s infinite alternate;
+				background: white;
+				animation-delay: 1.03s;
+				background: rgba(0, 255, 81, 0.9);
+			}
+			@keyframes anim103 {
+				0% {
+					transform: translate3d(-451px, 362px, -176px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(104) {
+				animation: anim104 4s infinite alternate;
+				background: white;
+				animation-delay: 1.04s;
+				background: rgba(0, 255, 87, 0.9);
+			}
+			@keyframes anim104 {
+				0% {
+					transform: translate3d(1473px, -153px, 143px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(105) {
+				animation: anim105 4s infinite alternate;
+				background: white;
+				animation-delay: 1.05s;
+				background: rgba(0, 255, 92, 0.9);
+			}
+			@keyframes anim105 {
+				0% {
+					transform: translate3d(1025px, -452px, -33px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(106) {
+				animation: anim106 4s infinite alternate;
+				background: white;
+				animation-delay: 1.06s;
+				background: rgba(0, 255, 98, 0.9);
+			}
+			@keyframes anim106 {
+				0% {
+					transform: translate3d(708px, 748px, -707px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(107) {
+				animation: anim107 4s infinite alternate;
+				background: white;
+				animation-delay: 1.07s;
+				background: rgba(0, 255, 104, 0.9);
+			}
+			@keyframes anim107 {
+				0% {
+					transform: translate3d(1101px, -740px, 733px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(108) {
+				animation: anim108 4s infinite alternate;
+				background: white;
+				animation-delay: 1.08s;
+				background: rgba(0, 255, 110, 0.9);
+			}
+			@keyframes anim108 {
+				0% {
+					transform: translate3d(205px, 336px, -537px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(109) {
+				animation: anim109 4s infinite alternate;
+				background: white;
+				animation-delay: 1.09s;
+				background: rgba(0, 255, 115, 0.9);
+			}
+			@keyframes anim109 {
+				0% {
+					transform: translate3d(445px, -922px, -293px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(110) {
+				animation: anim110 4s infinite alternate;
+				background: white;
+				animation-delay: 1.1s;
+				background: rgba(0, 255, 121, 0.9);
+			}
+			@keyframes anim110 {
+				0% {
+					transform: translate3d(342px, -474px, -898px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(111) {
+				animation: anim111 4s infinite alternate;
+				background: white;
+				animation-delay: 1.11s;
+				background: rgba(0, 255, 127, 0.9);
+			}
+			@keyframes anim111 {
+				0% {
+					transform: translate3d(512px, -130px, -881px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(112) {
+				animation: anim112 4s infinite alternate;
+				background: white;
+				animation-delay: 1.12s;
+				background: rgba(0, 255, 133, 0.9);
+			}
+			@keyframes anim112 {
+				0% {
+					transform: translate3d(397px, 26px, -242px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(113) {
+				animation: anim113 4s infinite alternate;
+				background: white;
+				animation-delay: 1.13s;
+				background: rgba(0, 255, 138, 0.9);
+			}
+			@keyframes anim113 {
+				0% {
+					transform: translate3d(1496px, 276px, 896px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(114) {
+				animation: anim114 4s infinite alternate;
+				background: white;
+				animation-delay: 1.14s;
+				background: rgba(0, 255, 144, 0.9);
+			}
+			@keyframes anim114 {
+				0% {
+					transform: translate3d(261px, 69px, -97px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(115) {
+				animation: anim115 4s infinite alternate;
+				background: white;
+				animation-delay: 1.15s;
+				background: rgba(0, 255, 150, 0.9);
+			}
+			@keyframes anim115 {
+				0% {
+					transform: translate3d(1028px, 329px, 558px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(116) {
+				animation: anim116 4s infinite alternate;
+				background: white;
+				animation-delay: 1.16s;
+				background: rgba(0, 255, 156, 0.9);
+			}
+			@keyframes anim116 {
+				0% {
+					transform: translate3d(590px, 128px, -915px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(117) {
+				animation: anim117 4s infinite alternate;
+				background: white;
+				animation-delay: 1.17s;
+				background: rgba(0, 255, 161, 0.9);
+			}
+			@keyframes anim117 {
+				0% {
+					transform: translate3d(1437px, -535px, 455px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(118) {
+				animation: anim118 4s infinite alternate;
+				background: white;
+				animation-delay: 1.18s;
+				background: rgba(0, 255, 167, 0.9);
+			}
+			@keyframes anim118 {
+				0% {
+					transform: translate3d(1211px, -682px, -337px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(119) {
+				animation: anim119 4s infinite alternate;
+				background: white;
+				animation-delay: 1.19s;
+				background: rgba(0, 255, 173, 0.9);
+			}
+			@keyframes anim119 {
+				0% {
+					transform: translate3d(1118px, -802px, 353px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(120) {
+				animation: anim120 4s infinite alternate;
+				background: white;
+				animation-delay: 1.2s;
+				background: rgba(0, 255, 179, 0.9);
+			}
+			@keyframes anim120 {
+				0% {
+					transform: translate3d(920px, 580px, 59px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(121) {
+				animation: anim121 4s infinite alternate;
+				background: white;
+				animation-delay: 1.21s;
+				background: rgba(0, 255, 184, 0.9);
+			}
+			@keyframes anim121 {
+				0% {
+					transform: translate3d(467px, -434px, 529px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(122) {
+				animation: anim122 4s infinite alternate;
+				background: white;
+				animation-delay: 1.22s;
+				background: rgba(0, 255, 190, 0.9);
+			}
+			@keyframes anim122 {
+				0% {
+					transform: translate3d(1418px, 953px, 307px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(123) {
+				animation: anim123 4s infinite alternate;
+				background: white;
+				animation-delay: 1.23s;
+				background: rgba(0, 255, 196, 0.9);
+			}
+			@keyframes anim123 {
+				0% {
+					transform: translate3d(1115px, -801px, 133px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(124) {
+				animation: anim124 4s infinite alternate;
+				background: white;
+				animation-delay: 1.24s;
+				background: rgba(0, 255, 201, 0.9);
+			}
+			@keyframes anim124 {
+				0% {
+					transform: translate3d(115px, 130px, 700px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(125) {
+				animation: anim125 4s infinite alternate;
+				background: white;
+				animation-delay: 1.25s;
+				background: rgba(0, 255, 207, 0.9);
+			}
+			@keyframes anim125 {
+				0% {
+					transform: translate3d(644px, -858px, -51px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(126) {
+				animation: anim126 4s infinite alternate;
+				background: white;
+				animation-delay: 1.26s;
+				background: rgba(0, 255, 213, 0.9);
+			}
+			@keyframes anim126 {
+				0% {
+					transform: translate3d(298px, -606px, 872px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(127) {
+				animation: anim127 4s infinite alternate;
+				background: white;
+				animation-delay: 1.27s;
+				background: rgba(0, 255, 219, 0.9);
+			}
+			@keyframes anim127 {
+				0% {
+					transform: translate3d(224px, -277px, 831px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(128) {
+				animation: anim128 4s infinite alternate;
+				background: white;
+				animation-delay: 1.28s;
+				background: rgba(0, 255, 224, 0.9);
+			}
+			@keyframes anim128 {
+				0% {
+					transform: translate3d(-355px, -53px, -129px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(129) {
+				animation: anim129 4s infinite alternate;
+				background: white;
+				animation-delay: 1.29s;
+				background: rgba(0, 255, 230, 0.9);
+			}
+			@keyframes anim129 {
+				0% {
+					transform: translate3d(195px, 910px, -461px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(130) {
+				animation: anim130 4s infinite alternate;
+				background: white;
+				animation-delay: 1.3s;
+				background: rgba(0, 255, 236, 0.9);
+			}
+			@keyframes anim130 {
+				0% {
+					transform: translate3d(-44px, 646px, -826px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(131) {
+				animation: anim131 4s infinite alternate;
+				background: white;
+				animation-delay: 1.31s;
+				background: rgba(0, 255, 242, 0.9);
+			}
+			@keyframes anim131 {
+				0% {
+					transform: translate3d(1155px, 381px, 877px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(132) {
+				animation: anim132 4s infinite alternate;
+				background: white;
+				animation-delay: 1.32s;
+				background: rgba(0, 255, 247, 0.9);
+			}
+			@keyframes anim132 {
+				0% {
+					transform: translate3d(802px, 206px, 414px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(133) {
+				animation: anim133 4s infinite alternate;
+				background: white;
+				animation-delay: 1.33s;
+				background: rgba(0, 255, 253, 0.9);
+			}
+			@keyframes anim133 {
+				0% {
+					transform: translate3d(1144px, 606px, 153px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(134) {
+				animation: anim134 4s infinite alternate;
+				background: white;
+				animation-delay: 1.34s;
+				background: rgba(0, 251, 255, 0.9);
+			}
+			@keyframes anim134 {
+				0% {
+					transform: translate3d(-470px, 750px, 148px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(135) {
+				animation: anim135 4s infinite alternate;
+				background: white;
+				animation-delay: 1.35s;
+				background: rgba(0, 245, 255, 0.9);
+			}
+			@keyframes anim135 {
+				0% {
+					transform: translate3d(923px, -781px, -648px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(136) {
+				animation: anim136 4s infinite alternate;
+				background: white;
+				animation-delay: 1.36s;
+				background: rgba(0, 240, 255, 0.9);
+			}
+			@keyframes anim136 {
+				0% {
+					transform: translate3d(1164px, -645px, -392px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(137) {
+				animation: anim137 4s infinite alternate;
+				background: white;
+				animation-delay: 1.37s;
+				background: rgba(0, 234, 255, 0.9);
+			}
+			@keyframes anim137 {
+				0% {
+					transform: translate3d(-309px, -577px, 564px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(138) {
+				animation: anim138 4s infinite alternate;
+				background: white;
+				animation-delay: 1.38s;
+				background: rgba(0, 228, 255, 0.9);
+			}
+			@keyframes anim138 {
+				0% {
+					transform: translate3d(418px, -97px, 79px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(139) {
+				animation: anim139 4s infinite alternate;
+				background: white;
+				animation-delay: 1.39s;
+				background: rgba(0, 222, 255, 0.9);
+			}
+			@keyframes anim139 {
+				0% {
+					transform: translate3d(979px, 469px, -935px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(140) {
+				animation: anim140 4s infinite alternate;
+				background: white;
+				animation-delay: 1.4s;
+				background: rgba(0, 217, 255, 0.9);
+			}
+			@keyframes anim140 {
+				0% {
+					transform: translate3d(-254px, -627px, -335px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(141) {
+				animation: anim141 4s infinite alternate;
+				background: white;
+				animation-delay: 1.41s;
+				background: rgba(0, 211, 255, 0.9);
+			}
+			@keyframes anim141 {
+				0% {
+					transform: translate3d(-16px, 728px, -824px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(142) {
+				animation: anim142 4s infinite alternate;
+				background: white;
+				animation-delay: 1.42s;
+				background: rgba(0, 205, 255, 0.9);
+			}
+			@keyframes anim142 {
+				0% {
+					transform: translate3d(618px, -247px, -983px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(143) {
+				animation: anim143 4s infinite alternate;
+				background: white;
+				animation-delay: 1.43s;
+				background: rgba(0, 200, 255, 0.9);
+			}
+			@keyframes anim143 {
+				0% {
+					transform: translate3d(1338px, 550px, 214px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(144) {
+				animation: anim144 4s infinite alternate;
+				background: white;
+				animation-delay: 1.44s;
+				background: rgba(0, 194, 255, 0.9);
+			}
+			@keyframes anim144 {
+				0% {
+					transform: translate3d(610px, 901px, 68px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(145) {
+				animation: anim145 4s infinite alternate;
+				background: white;
+				animation-delay: 1.45s;
+				background: rgba(0, 188, 255, 0.9);
+			}
+			@keyframes anim145 {
+				0% {
+					transform: translate3d(-32px, 830px, 319px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(146) {
+				animation: anim146 4s infinite alternate;
+				background: white;
+				animation-delay: 1.46s;
+				background: rgba(0, 182, 255, 0.9);
+			}
+			@keyframes anim146 {
+				0% {
+					transform: translate3d(136px, -12px, -431px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(147) {
+				animation: anim147 4s infinite alternate;
+				background: white;
+				animation-delay: 1.47s;
+				background: rgba(0, 177, 255, 0.9);
+			}
+			@keyframes anim147 {
+				0% {
+					transform: translate3d(177px, 414px, -62px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(148) {
+				animation: anim148 4s infinite alternate;
+				background: white;
+				animation-delay: 1.48s;
+				background: rgba(0, 171, 255, 0.9);
+			}
+			@keyframes anim148 {
+				0% {
+					transform: translate3d(-48px, 987px, 424px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(149) {
+				animation: anim149 4s infinite alternate;
+				background: white;
+				animation-delay: 1.49s;
+				background: rgba(0, 165, 255, 0.9);
+			}
+			@keyframes anim149 {
+				0% {
+					transform: translate3d(995px, 428px, -548px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(150) {
+				animation: anim150 4s infinite alternate;
+				background: white;
+				animation-delay: 1.5s;
+				background: rgba(0, 159, 255, 0.9);
+			}
+			@keyframes anim150 {
+				0% {
+					transform: translate3d(981px, -912px, 745px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(151) {
+				animation: anim151 4s infinite alternate;
+				background: white;
+				animation-delay: 1.51s;
+				background: rgba(0, 154, 255, 0.9);
+			}
+			@keyframes anim151 {
+				0% {
+					transform: translate3d(320px, 309px, -893px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(152) {
+				animation: anim152 4s infinite alternate;
+				background: white;
+				animation-delay: 1.52s;
+				background: rgba(0, 148, 255, 0.9);
+			}
+			@keyframes anim152 {
+				0% {
+					transform: translate3d(156px, 679px, 436px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(153) {
+				animation: anim153 4s infinite alternate;
+				background: white;
+				animation-delay: 1.53s;
+				background: rgba(0, 142, 255, 0.9);
+			}
+			@keyframes anim153 {
+				0% {
+					transform: translate3d(1412px, -732px, -352px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(154) {
+				animation: anim154 4s infinite alternate;
+				background: white;
+				animation-delay: 1.54s;
+				background: rgba(0, 136, 255, 0.9);
+			}
+			@keyframes anim154 {
+				0% {
+					transform: translate3d(1274px, 919px, 299px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(155) {
+				animation: anim155 4s infinite alternate;
+				background: white;
+				animation-delay: 1.55s;
+				background: rgba(0, 131, 255, 0.9);
+			}
+			@keyframes anim155 {
+				0% {
+					transform: translate3d(262px, -210px, 87px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(156) {
+				animation: anim156 4s infinite alternate;
+				background: white;
+				animation-delay: 1.56s;
+				background: rgba(0, 125, 255, 0.9);
+			}
+			@keyframes anim156 {
+				0% {
+					transform: translate3d(1350px, 76px, 17px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(157) {
+				animation: anim157 4s infinite alternate;
+				background: white;
+				animation-delay: 1.57s;
+				background: rgba(0, 119, 255, 0.9);
+			}
+			@keyframes anim157 {
+				0% {
+					transform: translate3d(-485px, 656px, -222px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(158) {
+				animation: anim158 4s infinite alternate;
+				background: white;
+				animation-delay: 1.58s;
+				background: rgba(0, 113, 255, 0.9);
+			}
+			@keyframes anim158 {
+				0% {
+					transform: translate3d(-253px, 946px, -656px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(159) {
+				animation: anim159 4s infinite alternate;
+				background: white;
+				animation-delay: 1.59s;
+				background: rgba(0, 108, 255, 0.9);
+			}
+			@keyframes anim159 {
+				0% {
+					transform: translate3d(143px, -215px, 111px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(160) {
+				animation: anim160 4s infinite alternate;
+				background: white;
+				animation-delay: 1.6s;
+				background: rgba(0, 102, 255, 0.9);
+			}
+			@keyframes anim160 {
+				0% {
+					transform: translate3d(-108px, 964px, -606px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(161) {
+				animation: anim161 4s infinite alternate;
+				background: white;
+				animation-delay: 1.61s;
+				background: rgba(0, 96, 255, 0.9);
+			}
+			@keyframes anim161 {
+				0% {
+					transform: translate3d(327px, -965px, 362px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(162) {
+				animation: anim162 4s infinite alternate;
+				background: white;
+				animation-delay: 1.62s;
+				background: rgba(0, 91, 255, 0.9);
+			}
+			@keyframes anim162 {
+				0% {
+					transform: translate3d(962px, -419px, -90px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(163) {
+				animation: anim163 4s infinite alternate;
+				background: white;
+				animation-delay: 1.63s;
+				background: rgba(0, 85, 255, 0.9);
+			}
+			@keyframes anim163 {
+				0% {
+					transform: translate3d(583px, 741px, 905px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(164) {
+				animation: anim164 4s infinite alternate;
+				background: white;
+				animation-delay: 1.64s;
+				background: rgba(0, 79, 255, 0.9);
+			}
+			@keyframes anim164 {
+				0% {
+					transform: translate3d(-250px, 415px, 615px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(165) {
+				animation: anim165 4s infinite alternate;
+				background: white;
+				animation-delay: 1.65s;
+				background: rgba(0, 73, 255, 0.9);
+			}
+			@keyframes anim165 {
+				0% {
+					transform: translate3d(841px, 677px, -395px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(166) {
+				animation: anim166 4s infinite alternate;
+				background: white;
+				animation-delay: 1.66s;
+				background: rgba(0, 68, 255, 0.9);
+			}
+			@keyframes anim166 {
+				0% {
+					transform: translate3d(1403px, 188px, 694px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(167) {
+				animation: anim167 4s infinite alternate;
+				background: white;
+				animation-delay: 1.67s;
+				background: rgba(0, 62, 255, 0.9);
+			}
+			@keyframes anim167 {
+				0% {
+					transform: translate3d(1220px, 302px, -453px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(168) {
+				animation: anim168 4s infinite alternate;
+				background: white;
+				animation-delay: 1.68s;
+				background: rgba(0, 56, 255, 0.9);
+			}
+			@keyframes anim168 {
+				0% {
+					transform: translate3d(1339px, 200px, -869px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(169) {
+				animation: anim169 4s infinite alternate;
+				background: white;
+				animation-delay: 1.69s;
+				background: rgba(0, 50, 255, 0.9);
+			}
+			@keyframes anim169 {
+				0% {
+					transform: translate3d(454px, 598px, -301px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(170) {
+				animation: anim170 4s infinite alternate;
+				background: white;
+				animation-delay: 1.7s;
+				background: rgba(0, 45, 255, 0.9);
+			}
+			@keyframes anim170 {
+				0% {
+					transform: translate3d(438px, -100px, -460px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(171) {
+				animation: anim171 4s infinite alternate;
+				background: white;
+				animation-delay: 1.71s;
+				background: rgba(0, 39, 255, 0.9);
+			}
+			@keyframes anim171 {
+				0% {
+					transform: translate3d(556px, -427px, -957px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(172) {
+				animation: anim172 4s infinite alternate;
+				background: white;
+				animation-delay: 1.72s;
+				background: rgba(0, 33, 255, 0.9);
+			}
+			@keyframes anim172 {
+				0% {
+					transform: translate3d(-67px, 561px, -193px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(173) {
+				animation: anim173 4s infinite alternate;
+				background: white;
+				animation-delay: 1.73s;
+				background: rgba(0, 27, 255, 0.9);
+			}
+			@keyframes anim173 {
+				0% {
+					transform: translate3d(-334px, 269px, 921px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(174) {
+				animation: anim174 4s infinite alternate;
+				background: white;
+				animation-delay: 1.74s;
+				background: rgba(0, 22, 255, 0.9);
+			}
+			@keyframes anim174 {
+				0% {
+					transform: translate3d(1352px, -465px, -532px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(175) {
+				animation: anim175 4s infinite alternate;
+				background: white;
+				animation-delay: 1.75s;
+				background: rgba(0, 16, 255, 0.9);
+			}
+			@keyframes anim175 {
+				0% {
+					transform: translate3d(1083px, 436px, -110px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(176) {
+				animation: anim176 4s infinite alternate;
+				background: white;
+				animation-delay: 1.76s;
+				background: rgba(0, 10, 255, 0.9);
+			}
+			@keyframes anim176 {
+				0% {
+					transform: translate3d(1453px, 865px, 185px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(177) {
+				animation: anim177 4s infinite alternate;
+				background: white;
+				animation-delay: 1.77s;
+				background: rgba(0, 4, 255, 0.9);
+			}
+			@keyframes anim177 {
+				0% {
+					transform: translate3d(1077px, 943px, -366px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(178) {
+				animation: anim178 4s infinite alternate;
+				background: white;
+				animation-delay: 1.78s;
+				background: rgba(1, 0, 255, 0.9);
+			}
+			@keyframes anim178 {
+				0% {
+					transform: translate3d(691px, -179px, -874px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(179) {
+				animation: anim179 4s infinite alternate;
+				background: white;
+				animation-delay: 1.79s;
+				background: rgba(7, 0, 255, 0.9);
+			}
+			@keyframes anim179 {
+				0% {
+					transform: translate3d(-60px, -990px, 651px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(180) {
+				animation: anim180 4s infinite alternate;
+				background: white;
+				animation-delay: 1.8s;
+				background: rgba(13, 0, 255, 0.9);
+			}
+			@keyframes anim180 {
+				0% {
+					transform: translate3d(-80px, -87px, 592px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(181) {
+				animation: anim181 4s infinite alternate;
+				background: white;
+				animation-delay: 1.81s;
+				background: rgba(18, 0, 255, 0.9);
+			}
+			@keyframes anim181 {
+				0% {
+					transform: translate3d(1228px, -453px, -605px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(182) {
+				animation: anim182 4s infinite alternate;
+				background: white;
+				animation-delay: 1.82s;
+				background: rgba(24, 0, 255, 0.9);
+			}
+			@keyframes anim182 {
+				0% {
+					transform: translate3d(1074px, 786px, -9px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(183) {
+				animation: anim183 4s infinite alternate;
+				background: white;
+				animation-delay: 1.83s;
+				background: rgba(30, 0, 255, 0.9);
+			}
+			@keyframes anim183 {
+				0% {
+					transform: translate3d(-248px, -829px, -628px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(184) {
+				animation: anim184 4s infinite alternate;
+				background: white;
+				animation-delay: 1.84s;
+				background: rgba(36, 0, 255, 0.9);
+			}
+			@keyframes anim184 {
+				0% {
+					transform: translate3d(-236px, -50px, 802px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(185) {
+				animation: anim185 4s infinite alternate;
+				background: white;
+				animation-delay: 1.85s;
+				background: rgba(41, 0, 255, 0.9);
+			}
+			@keyframes anim185 {
+				0% {
+					transform: translate3d(46px, -652px, -237px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(186) {
+				animation: anim186 4s infinite alternate;
+				background: white;
+				animation-delay: 1.86s;
+				background: rgba(47, 0, 255, 0.9);
+			}
+			@keyframes anim186 {
+				0% {
+					transform: translate3d(1114px, -125px, -785px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(187) {
+				animation: anim187 4s infinite alternate;
+				background: white;
+				animation-delay: 1.87s;
+				background: rgba(53, 0, 255, 0.9);
+			}
+			@keyframes anim187 {
+				0% {
+					transform: translate3d(1148px, -363px, -797px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(188) {
+				animation: anim188 4s infinite alternate;
+				background: white;
+				animation-delay: 1.88s;
+				background: rgba(59, 0, 255, 0.9);
+			}
+			@keyframes anim188 {
+				0% {
+					transform: translate3d(-226px, 766px, 881px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(189) {
+				animation: anim189 4s infinite alternate;
+				background: white;
+				animation-delay: 1.89s;
+				background: rgba(64, 0, 255, 0.9);
+			}
+			@keyframes anim189 {
+				0% {
+					transform: translate3d(-239px, 275px, 131px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(190) {
+				animation: anim190 4s infinite alternate;
+				background: white;
+				animation-delay: 1.9s;
+				background: rgba(70, 0, 255, 0.9);
+			}
+			@keyframes anim190 {
+				0% {
+					transform: translate3d(690px, -845px, -861px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(191) {
+				animation: anim191 4s infinite alternate;
+				background: white;
+				animation-delay: 1.91s;
+				background: rgba(76, 0, 255, 0.9);
+			}
+			@keyframes anim191 {
+				0% {
+					transform: translate3d(1324px, -454px, -494px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(192) {
+				animation: anim192 4s infinite alternate;
+				background: white;
+				animation-delay: 1.92s;
+				background: rgba(82, 0, 255, 0.9);
+			}
+			@keyframes anim192 {
+				0% {
+					transform: translate3d(-72px, 409px, 232px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(193) {
+				animation: anim193 4s infinite alternate;
+				background: white;
+				animation-delay: 1.93s;
+				background: rgba(87, 0, 255, 0.9);
+			}
+			@keyframes anim193 {
+				0% {
+					transform: translate3d(522px, 787px, 757px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(194) {
+				animation: anim194 4s infinite alternate;
+				background: white;
+				animation-delay: 1.94s;
+				background: rgba(93, 0, 255, 0.9);
+			}
+			@keyframes anim194 {
+				0% {
+					transform: translate3d(1229px, 371px, 996px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(195) {
+				animation: anim195 4s infinite alternate;
+				background: white;
+				animation-delay: 1.95s;
+				background: rgba(99, 0, 255, 0.9);
+			}
+			@keyframes anim195 {
+				0% {
+					transform: translate3d(491px, 566px, 442px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(196) {
+				animation: anim196 4s infinite alternate;
+				background: white;
+				animation-delay: 1.96s;
+				background: rgba(105, 0, 255, 0.9);
+			}
+			@keyframes anim196 {
+				0% {
+					transform: translate3d(-73px, 415px, -261px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(197) {
+				animation: anim197 4s infinite alternate;
+				background: white;
+				animation-delay: 1.97s;
+				background: rgba(110, 0, 255, 0.9);
+			}
+			@keyframes anim197 {
+				0% {
+					transform: translate3d(-168px, 191px, 258px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(198) {
+				animation: anim198 4s infinite alternate;
+				background: white;
+				animation-delay: 1.98s;
+				background: rgba(116, 0, 255, 0.9);
+			}
+			@keyframes anim198 {
+				0% {
+					transform: translate3d(-382px, -690px, -27px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(199) {
+				animation: anim199 4s infinite alternate;
+				background: white;
+				animation-delay: 1.99s;
+				background: rgba(122, 0, 255, 0.9);
+			}
+			@keyframes anim199 {
+				0% {
+					transform: translate3d(435px, -837px, 965px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.c:nth-child(200) {
+				animation: anim200 4s infinite alternate;
+				background: white;
+				animation-delay: 2s;
+				background: rgba(127, 0, 255, 0.9);
+			}
+			@keyframes anim200 {
+				0% {
+					transform: translate3d(307px, -983px, 826px);
+					opacity: 0;
+				}
+				70% {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			@keyframes lag {
+				50% {
+					transform: rotateY(180deg);
+				}
+				100% {
+					transform: rotateZ(180deg);
+				}
+			}
+		</style>
+
+		<script src="js/prefixfree.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class='wrap'>
+			<div class='inner'>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+				<div class='c'></div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
